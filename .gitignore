@@ -1,0 +1,187 @@
+#################################
+# OS / System Files
+#################################
+.DS_Store
+Thumbs.db
+desktop.ini
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+#################################
+# Python
+#################################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+*.egg
+.Python
+pip-wheel-metadata/
+
+#################################
+# Virtual Environments
+#################################
+venv/
+.env/
+.env.*
+.venv/
+conda/
+miniconda/
+anaconda/
+poetry.lock
+Pipfile.lock
+
+#################################
+# Jupyter / IPython
+#################################
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+profile_default/
+.ipython/
+
+#################################
+# Logs & Outputs
+#################################
+*.log
+logs/
+tmp/
+temp/
+output/
+outputs/
+results/
+artifacts/
+
+#################################
+# ML / Data Files
+#################################
+data/
+datasets/
+*.csv
+*.parquet
+*.feather
+*.pkl
+*.joblib
+*.h5
+*.npy
+*.npz
+*.tfrecord
+*.onnx
+*.pt
+*.pth
+*.ckpt
+*.model
+
+#################################
+# Experiment Tracking
+#################################
+mlruns/
+wandb/
+neptune/
+comet/
+tensorboard/
+lightning_logs/
+
+#################################
+# Model Artifacts
+#################################
+models/
+checkpoints/
+weights/
+exports/
+
+#################################
+# DVC
+#################################
+.dvc/cache/
+.dvc/tmp/
+*.dvc.lock
+
+#################################
+# Docker
+#################################
+*.tar
+docker-compose.override.yml
+
+#################################
+# Secrets & Credentials
+#################################
+*.env
+*.key
+*.pem
+*.crt
+*.cert
+*.p12
+*.secrets
+credentials.json
+service-account.json
+aws-credentials*
+azure-credentials*
+gcp-credentials*
+
+#################################
+# Cloud / Terraform
+#################################
+.terraform/
+*.tfstate
+*.tfstate.backup
+terraform.tfvars
+terraform.tfvars.json
+
+#################################
+# IDEs / Editors
+#################################
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*.orig
+
+#################################
+# Mac / Windows Metadata
+#################################
+.AppleDouble
+.LSOverride
+ehthumbs.db
+
+#################################
+# Build / Dist
+#################################
+build/
+dist/
+*.whl
+
+#################################
+# Node (if used for dashboards / UI)
+#################################
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+#################################
+# Coverage / Testing
+#################################
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+.cache/
+
+#################################
+# Misc
+#################################
+*.zip
+*.tar.gz
+*.7z
+*.rar
+*.exe
+*.dll
+*.iso
