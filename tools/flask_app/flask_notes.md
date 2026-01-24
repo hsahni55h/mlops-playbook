@@ -111,18 +111,55 @@ Client
 6. Response is created
 7. Response is sent back to the client
 
+## Jinja2 – Flask Templating Engine
 
-```mermaid
-flowchart TD
-    Client[Client<br/>(Browser / API Client)]
-    Server[Web Server<br/>(Werkzeug / Gunicorn / uWSGI)]
-    WSGI[WSGI Interface]
-    Flask[Flask Application]
-    View[View Function]
-    Response[Response<br/>(HTML / JSON)]
+Flask uses **Jinja2** to generate **dynamic HTML** for web applications.
 
-    Client -->|HTTP Request| Server
-    Server -->|WSGI| Flask
-    Flask --> View
-    View --> Response
-    Response --> Client
+Jinja2 is mainly used when building **server-rendered web pages**.  
+It is **not required** when building pure REST APIs that return JSON.
+
+---
+
+### What is Jinja2?
+
+Jinja2 is a **template engine** for Python.
+
+It allows you to:
+- Write HTML files
+- Embed Python-like logic inside them
+- Render dynamic content using data from Flask
+
+---
+
+### Why Jinja2 is Needed
+
+Without Jinja2:
+- You would have to write static HTML files
+- No dynamic content (user names, lists, conditions)
+
+With Jinja2:
+- HTML can change based on data
+- Same template can be reused multiple times
+- Cleaner separation between logic and UI
+
+---
+
+### How Jinja2 Works with Flask
+
+1. Flask receives a request
+2. Flask prepares data (Python variables)
+3. Flask passes data to a Jinja2 template
+4. Jinja2 renders HTML
+5. Rendered HTML is sent to the client
+
+---
+
+### Basic Example
+
+#### Flask Code
+```python
+from flask import render_template
+
+@app.route("/hello")
+def hello():
+    return render_template("hello.html", name="User")
