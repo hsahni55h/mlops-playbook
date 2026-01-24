@@ -112,3 +112,17 @@ Client
 7. Response is sent back to the client
 
 
+```mermaid
+flowchart TD
+    Client[Client<br/>(Browser / API Client)]
+    Server[Web Server<br/>(Werkzeug / Gunicorn / uWSGI)]
+    WSGI[WSGI Interface]
+    Flask[Flask Application]
+    View[View Function]
+    Response[Response<br/>(HTML / JSON)]
+
+    Client -->|HTTP Request| Server
+    Server -->|WSGI| Flask
+    Flask --> View
+    View --> Response
+    Response --> Client
