@@ -1,19 +1,11 @@
-<html>
-<h2>
-    Final Results
-</h2>
-<body>
+<h1>
 
-   
-     {% for key,value in results.items()   %}
-     
-      {# This is the comment section #}
-      <h1>{{ key }}<h1>
-      <h2>{{ value }}</h2>
+  Based on the marks You have  {{ results }}
 
-    
-     {% endfor %}
+  {% if results>=50 %}
+  <h1>You have passed with marks {{results}}</h1>
+  {% else %}
+  <h2>You have failed with marks {{results}} </h2>
+  {% endif %}
 
-    
-</body>
-</html>
+</h1>
