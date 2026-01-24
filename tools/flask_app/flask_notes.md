@@ -111,6 +111,8 @@ Client
 6. Response is created
 7. Response is sent back to the client
 
+---
+
 ## Jinja2 – Flask Templating Engine
 
 Flask uses **Jinja2** to generate **dynamic HTML** for web applications.
