@@ -73,43 +73,6 @@ Responsibilities:
 
 `app.run(debug=True)` is **not for production use**.
 
----
-
-## Request → Response Lifecycle
-
-1. Client sends HTTP request
-2. Flask parses the request
-3. URL is matched to a route
-4. View function executes
-5. Response is generated
-6. Response is returned to client
-
-## Request–Response Flow in Flask
-
-```text
-Client (Browser / API Client)
-        ↓ HTTP Request
-Web Server (Werkzeug / Gunicorn / uWSGI)
-        ↓ WSGI
-Flask Application
-        ↓
-View Function
-        ↓
-Response (HTML / JSON)
-        ↓
-Client
-
-
-
-### Step-by-step Flow
-
-1. Client sends an HTTP request
-2. Web server receives the request
-3. WSGI passes the request to Flask
-4. Flask matches the route
-5. View function executes
-6. Response is created
-7. Response is sent back to the client
 
 ---
 
@@ -156,12 +119,40 @@ With Jinja2:
 
 ---
 
-### Basic Example
 
-#### Flask Code
-```python
-from flask import render_template
+## Request → Response Lifecycle
 
-@app.route("/hello")
-def hello():
-    return render_template("hello.html", name="User")
+1. Client sends HTTP request
+2. Flask parses the request
+3. URL is matched to a route
+4. View function executes
+5. Response is generated
+6. Response is returned to client
+
+## Request–Response Flow in Flask
+
+```text
+Client (Browser / API Client)
+        ↓ HTTP Request
+Web Server (Werkzeug / Gunicorn / uWSGI)
+        ↓ WSGI
+Flask Application
+        ↓
+View Function
+        ↓
+Response (HTML / JSON)
+        ↓
+Client
+
+
+
+### Step-by-step Flow
+
+1. Client sends an HTTP request
+2. Web server receives the request
+3. WSGI passes the request to Flask
+4. Flask matches the route
+5. View function executes
+6. Response is created
+7. Response is sent back to the client
+
