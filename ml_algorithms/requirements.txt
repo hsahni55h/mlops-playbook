@@ -11,3 +11,5 @@ ipykernel
 joblib
 plotly
 xgboost
+kneed
+hdbscan
